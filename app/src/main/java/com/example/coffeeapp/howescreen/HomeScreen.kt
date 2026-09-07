@@ -1,5 +1,6 @@
 package com.example.coffeeapp.howescreen
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
@@ -27,31 +28,39 @@ import com.example.coffeeapp.ui_component.bottomNavigationbar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.painterResource
+import com.example.coffeeapp.R
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
  fun HomeScreen() {
 
-  var location = "Janatha Rd, Palarivattom"
+ var location = "Janatha Rd, Palarivattom"
  Scaffold(
   bottomBar = { bottomNavigationbar() }
  ) { innerpadding ->
 
-  Box(modifier = Modifier.fillMaxWidth()
-   .fillMaxHeight(1f/3f)
-   .background(
-    brush = Brush.linearGradient(
-     colors = listOf<Color>(
-      Color(0xFF303030),
-      Color(0xFF1F1F1F),
-      Color(0xFF121212)
+  Box(modifier = Modifier.fillMaxSize()
+   .padding(innerpadding)
+   .background(Color.White)) {
+
+   //Upper Black  Gradient
+   Box(modifier = Modifier.fillMaxWidth()
+    .fillMaxHeight(1f/3f)
+    .background(
+     brush = Brush.linearGradient(
+      colors = listOf<Color>(
+       Color(0xFF303030),
+       Color(0xFF1F1F1F),
+       Color(0xFF121212)
+      )
      )
     )
-   )) {
+   )
 
+   //Actual content are in Column
    Column(modifier = Modifier.fillMaxSize()
     .padding(horizontal = 16.dp)
-    .padding(innerpadding)
    ) {
 
     Text(text = "Location",
@@ -76,12 +85,32 @@ import androidx.compose.ui.Alignment
 
     }
 
-    Spacer(modifier = Modifier.height(20.dp))
+    Spacer(modifier = Modifier.height(40.dp))
 
-       Mysearchbar()
+    Mysearchbar()
+
+    Spacer(modifier = Modifier.height(40.dp))
+
+    Image(
+     painter = painterResource(R.drawable.banner_1),
+     contentDescription = "Banner Image"
+    )
+
+    Spacer(modifier = Modifier.height(16.dp))
+    HomeScreenCatogary()
 
 
+
+    //Content last herer;
    }
-  }
+
+
+      }
+
+        }
+
+
+  //function end here
  }
-}
+
+

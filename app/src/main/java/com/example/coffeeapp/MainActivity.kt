@@ -17,7 +17,7 @@ import com.example.coffeeapp.ui.theme.CoffeeAppTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge()//Important and with Sccffold and their innerpadding
         setContent {
             CoffeeAppTheme {
                 HomeScreen()
