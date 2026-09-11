@@ -30,6 +30,7 @@ import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
 import com.example.coffeeapp.R
+import com.example.coffeeapp.model.Product
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
@@ -85,11 +86,11 @@ import com.example.coffeeapp.R
 
     }
 
-    Spacer(modifier = Modifier.height(40.dp))
+    Spacer(modifier = Modifier.height(20.dp))
 
     Mysearchbar()
 
-    Spacer(modifier = Modifier.height(40.dp))
+    Spacer(modifier = Modifier.height(30.dp))
 
     Image(
      painter = painterResource(R.drawable.banner_1),
@@ -99,7 +100,21 @@ import com.example.coffeeapp.R
     Spacer(modifier = Modifier.height(16.dp))
     HomeScreenCatogary()
 
+    //Displaying Product
 
+    val products = listOf(
+     Product(1,"Epresso","Strong and Rich",3.80,R.drawable.coffee_1),
+     Product(2,"Latte","Strong and Rich",3.80,R.drawable.coffee_2),
+     Product(3,"Cappuccino","Strong and Rich",3.80,R.drawable.coffee_3),
+     Product(4,"Mocha","Strong and Rich",3.80,R.drawable.coffee_4),
+     Product(5,"Macchiato","Strong and Rich",3.80,R.drawable.coffee_5),
+     Product(6,"Flate White","Strong and Rich",3.80,R.drawable.coffee_6),
+     Product(7,"Iced Mocha","Strong and Rich",3.80,R.drawable.coffee_4),
+
+     )
+
+
+    ProductGrid(products = products)
 
     //Content last herer;
    }
