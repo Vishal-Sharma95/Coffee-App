@@ -1,4 +1,4 @@
-package com.example.coffeeapp.howescreen
+package com.example.coffeeapp.homescreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
