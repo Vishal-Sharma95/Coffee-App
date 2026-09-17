@@ -27,12 +27,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
+import androidx.navigation.NavController
 import com.example.coffeeapp.R
 import com.example.coffeeapp.model.Product
 
-@Preview(showBackground = true, showSystemUi = true)
 @Composable
- fun HomeScreen() {
+ fun HomeScreen(navController: NavController) {
 
  var location = "Janatha Rd, Palarivattom"
  Scaffold(
@@ -112,7 +112,7 @@ import com.example.coffeeapp.model.Product
      )
 
 
-    ProductGrid(products = products)
+    ProductGrid(products = products, navController)
 
     //Content last herer;
    }

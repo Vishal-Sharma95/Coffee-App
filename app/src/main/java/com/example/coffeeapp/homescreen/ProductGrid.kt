@@ -10,13 +10,15 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.coffeeapp.model.Product
 
 
 
 @Composable
  fun ProductGrid(
-     products: List<Product>
+     products: List<Product> ,
+     navController: NavController
  ) {
 
     LazyColumn(
@@ -35,14 +37,16 @@ and call .chunked(2), it creates a new list containing
                 //Card is called
                 ProductCard(
                     product = rowItem[0],
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    navController = navController
                 )
 
                 if(rowItem.size == 2){
 
                     ProductCard(
                         product = rowItem[1],
-                        modifier = Modifier.weight(1f)
+                        modifier = Modifier.weight(1f),
+                        navController = navController
                     )
 
                 } else {

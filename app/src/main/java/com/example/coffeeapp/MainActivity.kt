@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.coffeeapp.detailsscreen.DetailsScreen
 import com.example.coffeeapp.homescreen.HomeScreen
+import com.example.coffeeapp.navigation.NavGraph
 import com.example.coffeeapp.ui.theme.CoffeeAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,7 +15,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()//Important and with Sccffold and their innerpadding
         setContent {
             CoffeeAppTheme {
-                DetailsScreen()
+                NavGraph()
             }
         }
     }
