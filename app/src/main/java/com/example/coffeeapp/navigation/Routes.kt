@@ -19,4 +19,16 @@ sealed class Routes {
 
     @Serializable
     data class DetailScreen(val productId: Int): Routes()
+
+    @Serializable
+    object CartScreen: Routes()
+
+    @Serializable
+    object FavouritesScreen: Routes()
+
+    @Serializable
+    object ProfileScreen:Routes()
+
+
+
 }

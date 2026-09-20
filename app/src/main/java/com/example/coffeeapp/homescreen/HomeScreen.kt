@@ -36,7 +36,7 @@ import com.example.coffeeapp.model.Product
 
  var location = "Janatha Rd, Palarivattom"
  Scaffold(
-  bottomBar = { bottomNavigationbar() }
+  bottomBar = { bottomNavigationbar(navController,"Home") }
  ) { innerpadding ->
 
   Box(modifier = Modifier.fillMaxSize()

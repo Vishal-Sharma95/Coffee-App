@@ -6,6 +6,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.example.coffeeapp.FavouritesScreen.Favoritesscreen
+import com.example.coffeeapp.Profilescreen.ProfileScreen
+import com.example.coffeeapp.cardscreen.CardScreen
 import com.example.coffeeapp.detailsscreen.DetailsScreen
 import com.example.coffeeapp.homescreen.HomeScreen
 import com.example.coffeeapp.welcomescreen.Welcomescreen
@@ -30,13 +33,26 @@ import com.example.coffeeapp.welcomescreen.Welcomescreen
             HomeScreen(navController)
         }
 
-        //different case
+        //different case with parameter
         composable<Routes.DetailScreen> { backStackEntry ->
 
             val args =  backStackEntry.toRoute<Routes.DetailScreen>()
             DetailsScreen(productId = args.productId,navController)
 
         }
+
+        composable<Routes.CartScreen>{
+            CardScreen(navController)
+        }
+
+        composable<Routes.FavouritesScreen>{
+            Favoritesscreen(navController)
+        }
+
+        composable<Routes.ProfileScreen>{
+            ProfileScreen(navController)
+        }
+
     }
 
 }
